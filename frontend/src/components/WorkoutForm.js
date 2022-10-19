@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 
-const WorkoutForm = () => {
+const UserDetailsForm = () => {
   const { dispatch } = useWorkoutsContext()
 
   const [title, setTitle] = useState('')
@@ -40,7 +40,7 @@ const WorkoutForm = () => {
     <form className="create" onSubmit={handleSubmit}> 
       <h3>Add a New Workout</h3>
 
-      <label>Excersize Title:</label>
+      <label>Name:</label>
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
@@ -54,7 +54,7 @@ const WorkoutForm = () => {
         value={load}
       />
 
-      <label>Number of Reps:</label>
+      <label>phone number:</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
@@ -67,4 +67,4 @@ const WorkoutForm = () => {
   )
 }
 
-export default WorkoutForm
+export default UserDetailsForm
